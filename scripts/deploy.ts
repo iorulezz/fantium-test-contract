@@ -8,7 +8,7 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
   const FntContractFactory = await ethers.getContractFactory("FantiumTest");
   const fntContract = await FntContractFactory.deploy(
-    "this token is a share in Dominics-Tournament-Earnings-2023"
+    "This token is a share in Happy Gilmore's Earnings for the indicated season."
   );
 
   await fntContract.deployed();
