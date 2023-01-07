@@ -28,6 +28,12 @@ describe("My Tests of Fantium", function () {
 
       expect(await fntt.description()).to.equal(DESCRIPTION);
     });
+
+    it('supports interface', async () => {
+      const { fntt } = await loadFixture(deployAndAddOneToAllow);
+      
+      expect(await fntt.supportsInterface('0x01ffc9a7')).to.be.true;
+    });
   });
 
   describe("Manipulate allowlist", function () {
