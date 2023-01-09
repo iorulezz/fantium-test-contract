@@ -24,11 +24,11 @@ contract FantiumTest is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         shares[0] = "";
     }
 
-    function safeMint(string memory _share, string memory uri) public {
+    function safeMint(string memory share, string memory uri) public {
         require(allowlist[msg.sender], "Caller is not on the allowlist");
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
-        shares[tokenId] = _share;
+        shares[tokenId] = share;
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, uri);
         // delete from allowlist after minting - should be able to mint only once

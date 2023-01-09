@@ -9,3 +9,6 @@ typechain-types
 cache
 artifacts
 
+# OS files
+.DS_Store
+

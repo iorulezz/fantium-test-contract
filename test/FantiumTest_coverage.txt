@@ -1,0 +1,32 @@
+  My Tests of Fantium
+    Deployment
+      ✔ Should set the right owner (159ms)
+      ✔ Should have the right description
+      ✔ supports interface
+    Manipulate allowlist
+      ✔ other is already in the allowlist
+      ✔ cannot add unless owner
+      ✔ cannot revoke unless owner
+      ✔ owner can add
+      ✔ owner can revoke
+    Mint
+      ✔ cannot mint unless you are in allowlist
+      ✔ can mint if in allowlist
+      ✔ token uri is correct after mint
+      ✔ can only mint one token if in allowlist
+    Burn
+      ✔ only owner can burn
+      ✔ cannot burn if token does not exist
+      ✔ owner can burn if token has been minted
+
+
+  15 passing (358ms)
+
+------------------|----------|----------|----------|----------|----------------|
+File              |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+------------------|----------|----------|----------|----------|----------------|
+ contracts/       |      100 |      100 |      100 |      100 |                |
+  FantiumTest.sol |      100 |      100 |      100 |      100 |                |
+------------------|----------|----------|----------|----------|----------------|
+All files         |      100 |      100 |      100 |      100 |                |
+------------------|----------|----------|----------|----------|----------------|
